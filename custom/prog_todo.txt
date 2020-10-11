@@ -1,18 +1,18 @@
-sudo ovs-ofctl add-flow s1 in_port=1, dl_type=0x0800, nw_proto=6, actions=mod_tp_dst:80, output:2
-sudo ovs-ofctl add-flow s2 in_port=1, dl_type=0x0800, nw_proto=6, actions=mod_tp_dst:80, output:2
-sudo ovs-ofctl add-flow s4 in_port=1, dl_type=0x0800, nw_proto=6, actions=mod_tp_dst:80, output:4
+sudo ovs-ofctl add-flow s1 in_port=1,dl_type=0x0800,nw_proto=6,actions=mod_tp_dst:80,output:2
+sudo ovs-ofctl add-flow s2 in_port=1,dl_type=0x0800,nw_proto=6,actions=mod_tp_dst:80,output:2
+sudo ovs-ofctl add-flow s4 in_port=1,dl_type=0x0800,nw_proto=6,actions=mod_tp_dst:80,output:4
 
-sudo ovs-ofctl add-flow s1 in_port=1, actions=output:3
-sudo ovs-ofctl add-flow s3 in_port=1, actions=output:3
-sudo ovs-ofctl add-flow s5 in_port=2, actions=output:3
-sudo ovs-ofctl add-flow s4 in_port=2, actions=output:4
+sudo ovs-ofctl add-flow s1 in_port=1,actions=output:3
+sudo ovs-ofctl add-flow s3 in_port=1,actions=output:3
+sudo ovs-ofctl add-flow s5 in_port=2,actions=output:3
+sudo ovs-ofctl add-flow s4 in_port=2,actions=output:4
 
-sudo ovs-ofctl add-flow s4 in_port=4, dl_type=0x0800, nw_proto=6, actions=mod_tp_src:80, output:3
-sudo ovs-ofctl add-flow s3 in_port=2, dl_type=0x0800, nw_proto=6, actions=mod_tp_src:80, output:1
-sudo ovs-ofctl add-flow s1 in_port=3, dl_type=0x0800, nw_proto=6, actions=mod_tp_src:80, output:1
+sudo ovs-ofctl add-flow s4 in_port=4,dl_type=0x0800,nw_proto=6,actions=mod_tp_src:80,output:3
+sudo ovs-ofctl add-flow s3 in_port=2,dl_type=0x0800,nw_proto=6,actions=mod_tp_src:80,output:1
+sudo ovs-ofctl add-flow s1 in_port=3,dl_type=0x0800,nw_proto=6,actions=mod_tp_src:80,output:1
 
-sudo ovs-ofctl add-flow s4 in_port=4, actions=output:1
-sudo ovs-ofctl add-flow s2 in_port=2, actions=output:3
-sudo ovs-ofctl add-flow s5 in_port=1, actions=output:2
-sudo ovs-ofctl add-flow s3 in_port=3, actions=output:1
-sudo ovs-ofctl add-flow s1 in_port=3, actions=output:1
+sudo ovs-ofctl add-flow s4 in_port=4,actions=output:1
+sudo ovs-ofctl add-flow s2 in_port=2,actions=output:3
+sudo ovs-ofctl add-flow s5 in_port=1,actions=output:2
+sudo ovs-ofctl add-flow s3 in_port=3,actions=output:1
+sudo ovs-ofctl add-flow s1 in_port=3,actions=output:1
