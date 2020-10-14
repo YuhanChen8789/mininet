@@ -18,3 +18,7 @@ sudo ovs-ofctl add-flow s5 in_port=1,actions=output:2
 sudo ovs-ofctl add-flow s3 in_port=3,actions=output:1
 sudo ovs-ofctl add-flow s1 in_port=3,actions=output:1
 
+sudo mn –custom topo-5sw-2host.py –topo mytopo –controller remote
+sudo ovs-ofctl show s1
+sudo ovs-ofctl dump-flows s1
+
